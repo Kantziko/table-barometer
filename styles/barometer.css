@@ -1,4 +1,4 @@
-/* Baromètre de table ------------------------------------------------------ */
+/* Table Barometer --------------------------------------------------------- */
 
 .table-barometer {
   --tb-good: #4caf72;
@@ -12,7 +12,7 @@
 .table-barometer .tb-tone-mid { --tb-tone: var(--tb-mid); }
 .table-barometer .tb-tone-warn { --tb-tone: var(--tb-warn); }
 
-/* Palette du joueur ------------------------------------------------------- */
+/* Player palette ---------------------------------------------------------- */
 
 .tb-panel-content {
   display: flex;
@@ -101,7 +101,7 @@
   text-align: center;
 }
 
-/* Synthèse ---------------------------------------------------------------- */
+/* Summary ----------------------------------------------------------------- */
 
 .tb-summary-content {
   display: flex;
@@ -178,7 +178,7 @@
   opacity: 0.85;
 }
 
-/* Moyenne : volontairement secondaire par rapport à la distribution. */
+/* Average: deliberately secondary to the distribution. */
 
 .tb-summary .tb-average {
   display: flex;
@@ -252,7 +252,7 @@
   padding: 0.4rem 0;
 }
 
-/* Boutons ----------------------------------------------------------------- */
+/* Buttons ----------------------------------------------------------------- */
 
 .table-barometer .tb-actions {
   display: flex;
@@ -274,7 +274,7 @@
   border-color: var(--tb-warn);
 }
 
-/* Pastille du bouton de synthèse ------------------------------------------ */
+/* Alert dot on the summary button ----------------------------------------- */
 
 [data-tool="tableBarometerSummary"].tb-has-news,
 [data-control="tableBarometerSummary"].tb-has-news {
@@ -301,7 +301,7 @@
   50% { opacity: 0.35; }
 }
 
-/* Éditeur d'axes ---------------------------------------------------------- */
+/* Axis editor ------------------------------------------------------------- */
 
 .tb-axes-config {
   display: flex;
@@ -319,10 +319,10 @@
   resize: vertical;
 }
 
-/* Ajustements ------------------------------------------------------------- */
+/* Adjustments ------------------------------------------------------------- */
 
-/* Des barres pleine largeur écrasaient la lecture : on les resserre pour que
-   l'œil compare des hauteurs plutôt que des aplats de couleur. */
+/* Full-width bars made the chart hard to read: narrowing them lets the eye
+   compare heights rather than blocks of color. */
 .tb-summary .tb-bar-track {
   justify-content: center;
 }
@@ -331,10 +331,10 @@
   width: 62%;
 }
 
-/* Ne JAMAIS viser les boutons du header : Foundry porte les classes Font
-   Awesome sur le <button> lui-même (class="header-control icon fa-solid
-   fa-xmark"). Un `font-family: inherit` trop large y remplace la police
-   d'icônes et affiche des carrés vides à la place des glyphes. */
+/* NEVER target the header buttons: Foundry puts the Font Awesome classes on
+   the <button> itself (class="header-control icon fa-solid fa-xmark"). An
+   overly broad `font-family: inherit` would replace the icon font there and
+   show empty squares instead of the glyphs. */
 .tb-panel .tb-choice,
 .table-barometer .tb-actions button {
   color: inherit;
@@ -345,18 +345,18 @@
   color: var(--tb-warn);
 }
 
-/* Fenêtre réduite --------------------------------------------------------- */
+/* Minimized window -------------------------------------------------------- */
 
-/* Foundry masque tout bouton du header sauf la fermeture dès que la fenêtre est
-   réduite, ne laissant que le double-clic pour la rouvrir — introuvable pour
-   qui ne connaît pas l'astuce. On rend le bouton de restauration visible. */
+/* Once a window is minimized, Foundry hides every header button except Close,
+   leaving only a double-click to restore it — undiscoverable for anyone who
+   does not know the trick. The restore button is made visible again. */
 .application.table-barometer.minimized .header-control[data-action="toggleMinimize"] {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Éditeur d'axes ---------------------------------------------------------- */
+/* Axis editor ------------------------------------------------------------- */
 
 .tb-editor-content {
   display: flex;
@@ -463,7 +463,7 @@
   font-size: 0.75rem;
 }
 
-/* Sélecteur d'emoji : ancré sous la position qu'il modifie. */
+/* Emoji picker: anchored below the position it edits. */
 
 .tb-axes-editor .tb-picker {
   position: absolute;
@@ -549,11 +549,11 @@
   font-weight: 600;
 }
 
-/* Tenue en largeur de l'éditeur ------------------------------------------- */
+/* Keeping the editor within its width ------------------------------------- */
 
-/* `1fr` vaut `minmax(auto, 1fr)` : la largeur minimale intrinsèque des champs
-   texte l'emporte alors sur le partage en trois et fait déborder la fenêtre.
-   `minmax(0, 1fr)` autorise les colonnes à se comprimer. */
+/* `1fr` means `minmax(auto, 1fr)`: the text fields' intrinsic minimum width
+   then wins over the three-way split and overflows the window.
+   `minmax(0, 1fr)` lets the columns shrink. */
 .tb-axes-editor .tb-positions {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -575,7 +575,7 @@
   min-width: 0;
 }
 
-/* Sur la colonne de droite, le sélecteur s'ouvrirait hors du cadre. */
+/* In the right-hand column, the picker would open outside the frame. */
 .tb-axes-editor .tb-position:last-child .tb-picker {
   left: auto;
   right: 0;
@@ -585,12 +585,12 @@
   max-width: calc(100% + 12rem);
 }
 
-/* Grille du sélecteur ----------------------------------------------------- */
+/* Picker grid ------------------------------------------------------------- */
 
-/* Même piège que pour les positions : `repeat(n, 1fr)` laisse la largeur
-   intrinsèque des boutons l'emporter, et la dernière colonne sortait du cadre.
-   `minmax(0, 1fr)` plus `min-width: 0` forcent le partage en parts égales.
-   48 suggestions sur 8 colonnes remplissent exactement six rangées. */
+/* Same trap as for the positions: `repeat(n, 1fr)` lets the buttons' intrinsic
+   width win, and the last column spilled out of the frame. `minmax(0, 1fr)`
+   plus `min-width: 0` force an even split. 48 suggestions in 8 columns fill
+   exactly six rows. */
 .tb-axes-editor .tb-picker-grid {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
@@ -600,9 +600,9 @@
   box-sizing: border-box;
 }
 
-/* En-tête d'axe : Foundry donne aux champs une largeur par défaut de 100%, qui
-   sert de base flex et fait passer le reste de la ligne à la ligne suivante.
-   Une base explicite remet le nom, la nature et les boutons sur un seul rang. */
+/* Axis header: Foundry gives inputs a default width of 100%, which becomes the
+   flex basis and pushes the rest of the row onto the next line. An explicit
+   basis puts the name, the kind and the buttons back on a single row. */
 .tb-axes-editor .tb-axis-name {
   flex: 1 1 8rem;
   width: auto;
@@ -612,12 +612,12 @@
   width: auto;
 }
 
-/* Pied collant et signalement d'erreur ------------------------------------ */
+/* Sticky footer and error reporting --------------------------------------- */
 
-/* La liste d'axes défile, et c'est presque toujours celui qu'on vient
-   d'ajouter, tout en bas, qui pose problème : un message en haut de fenêtre
-   serait hors champ au moment du clic. Boutons et message restent donc visibles
-   au pied de la fenêtre, et l'axe fautif est signalé puis mis au premier plan. */
+/* The axis list scrolls, and the culprit is almost always the axis just added
+   at the very bottom: a message at the top of the window would be out of view
+   at the moment of clicking. Buttons and message therefore stay visible at the
+   foot of the window, and the offending axis is flagged and brought into view. */
 .tb-axes-editor .tb-sticky-footer {
   position: sticky;
   bottom: 0;
