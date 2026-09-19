@@ -1,18 +1,22 @@
 # Table Barometer
 
-A Foundry VTT module (v13–v14) that lets players tell the GM how the session
-feels — without having to say it out loud.
+A Foundry VTT module (v13–v14).
 
-Players rarely stop a game to say they are bored, that a scene drags, or that
-there is too much talk and not enough action. Online, the GM cannot read faces
-to guess. Table Barometer gives each player a small, always-on palette of
-three-position toggles — fun, pace, amount of roleplay — that they can change at
-any moment. The GM sees an anonymized summary of the whole table: how the
-answers are spread, not just an average, so a divided table does not pass for a
-contented one.
+As a GM on Foundry, without any video from my players, I sometimes wonder
+whether they are having fun, how the pace of the game feels to them, and whether
+there is enough RP, or too much. Rather than waiting for the end of the game to
+know how they feel, I wanted a way to "take the temperature" of the table.
 
-Nothing is recorded: no history, no statistics, nothing kept once the session is
-over.
+This module does exactly that. It is a probe that captures whatever my players
+want to share with me. The summary I can consult as a GM is anonymous on screen,
+so I cannot start pointing fingers at any player. And I can see the average
+value as well as the distribution of "votes" (important when the players are
+polarized).
+
+The module comes with three basic axes to start with (fun, pace and amount of
+RP), but it can be tailored to your needs. Only the GM can reset the barometer
+or change its axes; a determined player could still skew the numbers, so it is a
+mood gauge, not a ballot box. Nothing is recorded or logged.
 
 ![GM summary and palette on the left, a player's palette in French on the right](docs/palette-and-summary.png)
 

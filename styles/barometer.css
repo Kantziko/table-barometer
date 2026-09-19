@@ -301,24 +301,6 @@
   50% { opacity: 0.35; }
 }
 
-/* Axis editor ------------------------------------------------------------- */
-
-.tb-axes-config {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  height: 100%;
-}
-
-.tb-axes-config textarea {
-  flex: 1 1 auto;
-  min-height: 320px;
-  font-family: var(--font-mono, monospace);
-  font-size: 0.78rem;
-  line-height: 1.4;
-  resize: vertical;
-}
-
 /* Adjustments ------------------------------------------------------------- */
 
 /* Full-width bars made the chart hard to read: narrowing them lets the eye
