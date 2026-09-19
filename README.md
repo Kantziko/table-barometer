@@ -7,7 +7,7 @@ Players rarely stop a game to say they are bored, that a scene drags, or that
 there is too much talk and not enough action. Online, the GM cannot read faces
 to guess. Table Barometer gives each player a small, always-on palette of
 three-position toggles — fun, pace, amount of roleplay — that they can change at
-any moment. The GM sees an anonymised summary of the whole table: how the
+any moment. The GM sees an anonymized summary of the whole table: how the
 answers are spread, not just an average, so a divided table does not pass for a
 contented one.
 
@@ -26,7 +26,7 @@ over.
 | **Pace** | bipolar — the optimum is in the middle | 🐢 Too slow · 👌 Good pace · 🐇 Too fast |
 | **Amount of roleplay** | bipolar — the optimum is in the middle | ⚔️ Not enough · ⚖️ Good balance · 🎭 Too much |
 
-The distinction matters. On a bipolar axis a perfectly centred average can hide
+The distinction matters. On a bipolar axis a perfectly centered average can hide
 a table split down the middle. That is why the summary leads with the
 **distribution**, shows the average second, and raises an explicit **Split
 table** flag whenever both extremes are occupied at once.
@@ -56,7 +56,7 @@ Then, in your world: **Manage Modules** → enable *Table Barometer*.
 
 ## Use
 
-**Players** get a floating palette: draggable, minimisable, position remembered
+**Players** get a floating palette: draggable, minimizable, position remembered
 per client. One click sets an answer, a second click on the same position
 withdraws it. Nothing is selected at first — *not set* is a state of its own,
 distinct from *everything's fine* in the summary.
@@ -178,7 +178,7 @@ must be trustworthy.
 scripts/config.js        axes, validation, settings, label resolution
 scripts/state.js         player sessionStorage + GM aggregate + summary maths
 scripts/net.js           socket (report / poll), setting reactions, alert dot
-scripts/base-app.js      shared window frame: no detach, adds minimise
+scripts/base-app.js      shared window frame: no detach, adds minimize
 scripts/player-panel.js  player palette
 scripts/gm-summary.js    summary window
 scripts/settings.js      settings declaration
@@ -190,6 +190,6 @@ translations-pending/    draft translations awaiting native review (not shipped)
 docs/                    screenshots for this page (not shipped in the zip)
 ```
 
-## Licence
+## License
 
 MIT — see `LICENSE`.

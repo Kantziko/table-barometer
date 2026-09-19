@@ -21,7 +21,7 @@
       }
     },
     "Window": {
-      "Minimize": "Minimise",
+      "Minimize": "Minimize",
       "Maximize": "Restore"
     },
     "Panel": {
@@ -41,7 +41,7 @@
       "Flush": "Reset",
       "FlushHint": "Clears every value, yours and the players'.",
       "FlushConfirm": "Reset the barometer for the whole table?",
-      "Centered": "centred",
+      "Centered": "centered",
       "EditAxes": "Axes",
       "Unanswered": "no answer"
     },
@@ -52,7 +52,7 @@
       },
       "PlayersSeeSummary": {
         "Name": "Players may open the summary",
-        "Hint": "Grants players access to the same anonymised summary as the GM."
+        "Hint": "Grants players access to the same anonymized summary as the GM."
       },
       "MinRespondents": {
         "Name": "Minimum answers threshold",
