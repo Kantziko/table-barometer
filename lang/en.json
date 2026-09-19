@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Fun",
+        "Low": "Meh",
+        "Mid": "Fine",
+        "High": "Loving it"
+      },
+      "Pace": {
+        "Label": "Pace",
+        "Low": "Too slow",
+        "Mid": "Good pace",
+        "High": "Too fast"
+      },
+      "Roleplay": {
+        "Label": "Amount of roleplay",
+        "Low": "Not enough",
+        "Mid": "Good balance",
+        "High": "Too much"
+      }
+    },
+    "Window": {
+      "Minimize": "Minimise",
+      "Maximize": "Restore"
+    },
+    "Panel": {
+      "Title": "Barometer",
+      "Hint": "How you feel, any time. Click again to withdraw your answer.",
+      "Unset": "Not set",
+      "Flushed": "The GM reset the barometer."
+    },
+    "Summary": {
+      "Title": "Barometer — summary",
+      "Respondents": "{n} of {total} answered",
+      "Hidden": "Hidden: fewer than {min} answers.",
+      "NoData": "No answers yet.",
+      "Average": "Average",
+      "Polarized": "Split table",
+      "PolarizedHint": "Players are reporting both extremes at once: the average is meaningless here.",
+      "Flush": "Reset",
+      "FlushHint": "Clears every value, yours and the players'.",
+      "FlushConfirm": "Reset the barometer for the whole table?",
+      "Centered": "centred",
+      "EditAxes": "Axes",
+      "Unanswered": "no answer"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "GM also gets the palette",
+        "Hint": "Shows the voting palette to the GM. Their value is then counted in the summary."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Players may open the summary",
+        "Hint": "Grants players access to the same anonymised summary as the GM."
+      },
+      "MinRespondents": {
+        "Name": "Minimum answers threshold",
+        "Hint": "Below this number of answers, an axis stays hidden. Protects anonymity at small tables."
+      },
+      "RevealDelay": {
+        "Name": "Reveal delay (seconds)",
+        "Hint": "Maximum random delay before a change reaches the GM — the alert dot and the open summary alike. 0 = real time. Raising it breaks the link between a change and whatever was happening at that moment. Nothing is lost, only its timing is blurred."
+      },
+      "AutoOpen": {
+        "Name": "Open the palette on login",
+        "Hint": "The palette shows up automatically when the world loads."
+      },
+      "Axes": {
+        "Name": "Barometer axes",
+        "Hint": "Labels, icons and nature of each axis.",
+        "Label": "Configure axes",
+        "Title": "Barometer axes",
+        "EditorIntro": "Add, remove or reorder the axes your table answers on. Changes apply at once; answers on axes you keep are preserved.",
+        "Add": "Add an axis",
+        "Remove": "Remove this axis",
+        "NamePlaceholder": "Axis name",
+        "LabelPlaceholder": "Label",
+        "PickIcon": "Choose an icon",
+        "FreeIcon": "Or paste any emoji, then Enter",
+        "KindBipolar": "Middle is best",
+        "KindOrdinal": "Right is best",
+        "KindHint": "Bipolar: both ends are warnings and the middle is the sweet spot (pace, dosage). Ordinal: the right end is the good one (fun).",
+        "Advanced": "Advanced (JSON)",
+        "AdvancedHint": "While this section is open, its contents take precedence over the fields above when saving.",
+        "EditorHint": "One object per axis. \"kind\" is either \"bipolar\" (the optimum sits in the middle: pace, dosage) or \"ordinal\" (the optimum sits on the right: fun). The three options must carry the values -1, 0 and 1. A label may be a translation key or plain text.",
+        "Reset": "Back to default axes",
+        "Save": "Save",
+        "NeedsName": "Every axis needs a name before this can be saved.",
+        "Invalid": "Invalid JSON: {error}",
+        "Saved": "Axes saved."
+      }
+    },
+    "Notify": {
+      "NoGM": "No GM connected: your setting will be sent as soon as one connects."
+    },
+    "Validation": {
+      "Root": "The root must be a non-empty array.",
+      "TooMany": "At most {max} axes (got {count}).",
+      "NoId": "Every axis needs a textual 'id'.",
+      "BadId": "Axis id '{id}' must be {max} characters or fewer, letters, digits, - and _ only.",
+      "ForbiddenId": "'{id}' cannot be used as an axis id.",
+      "DuplicateId": "Duplicate axis id: '{id}'.",
+      "NoLabel": "Axis '{id}' has no 'label'.",
+      "BadLabel": "Axis '{id}' needs a label of {max} characters or fewer.",
+      "BadKind": "Axis '{id}' must have kind = \"ordinal\" or \"bipolar\".",
+      "BadOptions": "Axis '{id}' must have exactly 3 options.",
+      "BadValues": "The options of axis '{id}' must carry the values -1, 0 and 1.",
+      "OptionLabel": "An option of axis '{id}' has a label longer than {max} characters.",
+      "OptionIcon": "An option of axis '{id}' has an icon longer than {max} characters."
+    }
+  }
+}

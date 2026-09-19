@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Diversión",
+        "Low": "Meh",
+        "Mid": "Bien",
+        "High": "Me encanta"
+      },
+      "Pace": {
+        "Label": "Ritmo",
+        "Low": "Demasiado lento",
+        "Mid": "Buen ritmo",
+        "High": "Demasiado rápido"
+      },
+      "Roleplay": {
+        "Label": "Cantidad de rol",
+        "Low": "Poco",
+        "Mid": "Buen equilibrio",
+        "High": "Demasiado"
+      }
+    },
+    "Window": {
+      "Minimize": "Minimizar",
+      "Maximize": "Restaurar"
+    },
+    "Panel": {
+      "Title": "Barómetro",
+      "Hint": "Cómo te sientes, en cualquier momento. Vuelve a hacer clic para retirar tu respuesta.",
+      "Unset": "Sin respuesta",
+      "Flushed": "El DJ ha reiniciado el barómetro."
+    },
+    "Summary": {
+      "Title": "Barómetro — resumen",
+      "Respondents": "{n} de {total} han respondido",
+      "Hidden": "Oculto: menos de {min} respuestas.",
+      "NoData": "Aún no hay respuestas.",
+      "Average": "Media",
+      "Polarized": "Mesa dividida",
+      "PolarizedHint": "Hay jugadores que señalan ambos extremos a la vez: aquí la media no significa nada.",
+      "Flush": "Reiniciar",
+      "FlushHint": "Borra todos los valores, los tuyos y los de los jugadores.",
+      "FlushConfirm": "¿Reiniciar el barómetro para toda la mesa?",
+      "Centered": "centrado",
+      "EditAxes": "Ejes",
+      "Unanswered": "sin respuesta"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "El DJ también tiene la paleta",
+        "Hint": "Muestra la paleta de votación al DJ. Su valor se cuenta entonces en el resumen."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Los jugadores pueden abrir el resumen",
+        "Hint": "Da a los jugadores acceso al mismo resumen anónimo que ve el DJ."
+      },
+      "MinRespondents": {
+        "Name": "Umbral mínimo de respuestas",
+        "Hint": "Por debajo de este número de respuestas, el eje permanece oculto. Protege el anonimato en mesas pequeñas."
+      },
+      "RevealDelay": {
+        "Name": "Retraso de revelación (segundos)",
+        "Hint": "Retraso aleatorio máximo antes de que un cambio llegue al DJ, tanto al punto de aviso como al resumen abierto. 0 = tiempo real. Aumentarlo rompe el vínculo entre un cambio y lo que estaba pasando en ese momento. No se pierde nada, solo se difumina el momento."
+      },
+      "AutoOpen": {
+        "Name": "Abrir la paleta al conectarse",
+        "Hint": "La paleta aparece automáticamente al cargar el mundo."
+      },
+      "Axes": {
+        "Name": "Ejes del barómetro",
+        "Hint": "Etiquetas, iconos y tipo de cada eje.",
+        "Label": "Configurar ejes",
+        "Title": "Ejes del barómetro",
+        "EditorIntro": "Añade, quita o reordena los ejes sobre los que responde tu mesa. Los cambios se aplican al instante; las respuestas de los ejes que conserves se mantienen.",
+        "Add": "Añadir un eje",
+        "Remove": "Quitar este eje",
+        "NamePlaceholder": "Nombre del eje",
+        "LabelPlaceholder": "Etiqueta",
+        "PickIcon": "Elegir un icono",
+        "FreeIcon": "O pega cualquier emoji y pulsa Intro",
+        "KindBipolar": "El centro es lo ideal",
+        "KindOrdinal": "La derecha es lo ideal",
+        "KindHint": "Bipolar: ambos extremos son alertas y el centro es el punto ideal (ritmo, dosis). Ordinal: el extremo derecho es el bueno (diversión).",
+        "Advanced": "Avanzado (JSON)",
+        "AdvancedHint": "Mientras esta sección esté abierta, su contenido tiene prioridad sobre los campos de arriba al guardar.",
+        "EditorHint": "Un objeto por eje. \"kind\" es \"bipolar\" (el óptimo está en el centro: ritmo, dosis) u \"ordinal\" (el óptimo está a la derecha: diversión). Las tres opciones deben llevar los valores -1, 0 y 1. Una etiqueta puede ser una clave de traducción o texto normal.",
+        "Reset": "Volver a los ejes por defecto",
+        "Save": "Guardar",
+        "NeedsName": "Cada eje necesita un nombre antes de poder guardar.",
+        "Invalid": "JSON no válido: {error}",
+        "Saved": "Ejes guardados."
+      }
+    },
+    "Notify": {
+      "NoGM": "No hay ningún DJ conectado: tu ajuste se enviará en cuanto se conecte uno."
+    },
+    "Validation": {
+      "Root": "La raíz debe ser un array no vacío.",
+      "TooMany": "Como máximo {max} ejes (hay {count}).",
+      "NoId": "Cada eje necesita un 'id' de texto.",
+      "BadId": "El id de eje '{id}' debe tener {max} caracteres o menos: solo letras, cifras, - y _.",
+      "ForbiddenId": "'{id}' no se puede usar como id de eje.",
+      "DuplicateId": "Id de eje duplicado: '{id}'.",
+      "NoLabel": "El eje '{id}' no tiene 'label'.",
+      "BadLabel": "El eje '{id}' necesita una etiqueta de {max} caracteres o menos.",
+      "BadKind": "El eje '{id}' debe tener kind = \"ordinal\" o \"bipolar\".",
+      "BadOptions": "El eje '{id}' debe tener exactamente 3 opciones.",
+      "BadValues": "Las opciones del eje '{id}' deben llevar los valores -1, 0 y 1.",
+      "OptionLabel": "Una opción del eje '{id}' tiene una etiqueta de más de {max} caracteres.",
+      "OptionIcon": "Una opción del eje '{id}' tiene un icono de más de {max} caracteres."
+    }
+  }
+}

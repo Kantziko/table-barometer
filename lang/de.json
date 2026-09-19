@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Spaß",
+        "Low": "Naja",
+        "Mid": "Passt",
+        "High": "Super"
+      },
+      "Pace": {
+        "Label": "Tempo",
+        "Low": "Zu langsam",
+        "Mid": "Gutes Tempo",
+        "High": "Zu schnell"
+      },
+      "Roleplay": {
+        "Label": "Anteil Rollenspiel",
+        "Low": "Zu wenig",
+        "Mid": "Gute Balance",
+        "High": "Zu viel"
+      }
+    },
+    "Window": {
+      "Minimize": "Minimieren",
+      "Maximize": "Wiederherstellen"
+    },
+    "Panel": {
+      "Title": "Barometer",
+      "Hint": "Wie es dir gerade geht, jederzeit. Erneut klicken, um deine Antwort zurückzuziehen.",
+      "Unset": "Nicht gesetzt",
+      "Flushed": "Die SL hat das Barometer zurückgesetzt."
+    },
+    "Summary": {
+      "Title": "Barometer — Übersicht",
+      "Respondents": "{n} von {total} haben geantwortet",
+      "Hidden": "Ausgeblendet: weniger als {min} Antworten.",
+      "NoData": "Noch keine Antworten.",
+      "Average": "Durchschnitt",
+      "Polarized": "Gespaltener Tisch",
+      "PolarizedHint": "Spielende melden gleichzeitig beide Extreme: Der Durchschnitt ist hier bedeutungslos.",
+      "Flush": "Zurücksetzen",
+      "FlushHint": "Löscht alle Werte, deine und die der Spielenden.",
+      "FlushConfirm": "Das Barometer für den ganzen Tisch zurücksetzen?",
+      "Centered": "mittig",
+      "EditAxes": "Achsen",
+      "Unanswered": "keine Antwort"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "Auch die SL erhält die Palette",
+        "Hint": "Zeigt der SL die Abstimmungspalette. Ihr Wert zählt dann in der Übersicht mit."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Spielende dürfen die Übersicht öffnen",
+        "Hint": "Gibt Spielenden Zugriff auf dieselbe anonymisierte Übersicht wie der SL."
+      },
+      "MinRespondents": {
+        "Name": "Mindestanzahl an Antworten",
+        "Hint": "Unterhalb dieser Anzahl an Antworten bleibt eine Achse ausgeblendet. Schützt die Anonymität an kleinen Tischen."
+      },
+      "RevealDelay": {
+        "Name": "Anzeigeverzögerung (Sekunden)",
+        "Hint": "Maximale zufällige Verzögerung, bevor eine Änderung die SL erreicht — sowohl der Hinweispunkt als auch die geöffnete Übersicht. 0 = Echtzeit. Ein höherer Wert trennt eine Änderung von dem, was in diesem Moment am Tisch geschah. Nichts geht verloren, nur der Zeitpunkt wird verwischt."
+      },
+      "AutoOpen": {
+        "Name": "Palette beim Einloggen öffnen",
+        "Hint": "Die Palette erscheint automatisch, wenn die Welt geladen wird."
+      },
+      "Axes": {
+        "Name": "Barometer-Achsen",
+        "Hint": "Beschriftungen, Symbole und Art jeder Achse.",
+        "Label": "Achsen konfigurieren",
+        "Title": "Barometer-Achsen",
+        "EditorIntro": "Füge die Achsen hinzu, entferne sie oder ordne sie neu, auf denen dein Tisch antwortet. Änderungen gelten sofort; Antworten auf beibehaltenen Achsen bleiben erhalten.",
+        "Add": "Achse hinzufügen",
+        "Remove": "Diese Achse entfernen",
+        "NamePlaceholder": "Name der Achse",
+        "LabelPlaceholder": "Beschriftung",
+        "PickIcon": "Symbol wählen",
+        "FreeIcon": "Oder beliebiges Emoji einfügen, dann Enter",
+        "KindBipolar": "Mitte ist optimal",
+        "KindOrdinal": "Rechts ist optimal",
+        "KindHint": "Bipolar: Beide Enden sind Warnsignale, die Mitte ist der ideale Punkt (Tempo, Dosierung). Ordinal: Das rechte Ende ist das gute (Spaß).",
+        "Advanced": "Erweitert (JSON)",
+        "AdvancedHint": "Solange dieser Abschnitt geöffnet ist, hat sein Inhalt beim Speichern Vorrang vor den Feldern oben.",
+        "EditorHint": "Ein Objekt pro Achse. \"kind\" ist entweder \"bipolar\" (das Optimum liegt in der Mitte: Tempo, Dosierung) oder \"ordinal\" (das Optimum liegt rechts: Spaß). Die drei Optionen müssen die Werte -1, 0 und 1 tragen. Eine Beschriftung kann ein Übersetzungsschlüssel oder einfacher Text sein.",
+        "Reset": "Zurück zu den Standardachsen",
+        "Save": "Speichern",
+        "NeedsName": "Jede Achse braucht einen Namen, bevor gespeichert werden kann.",
+        "Invalid": "Ungültiges JSON: {error}",
+        "Saved": "Achsen gespeichert."
+      }
+    },
+    "Notify": {
+      "NoGM": "Keine SL verbunden: Deine Einstellung wird gesendet, sobald sich eine verbindet."
+    },
+    "Validation": {
+      "Root": "Die Wurzel muss ein nicht leeres Array sein.",
+      "TooMany": "Höchstens {max} Achsen ({count} angegeben).",
+      "NoId": "Jede Achse braucht eine textuelle „id“.",
+      "BadId": "Die Achsen-id „{id}“ darf höchstens {max} Zeichen lang sein und nur Buchstaben, Ziffern, - und _ enthalten.",
+      "ForbiddenId": "„{id}“ kann nicht als Achsen-id verwendet werden.",
+      "DuplicateId": "Doppelte Achsen-id: „{id}“.",
+      "NoLabel": "Achse „{id}“ hat kein „label“.",
+      "BadLabel": "Achse „{id}“ braucht eine Beschriftung von höchstens {max} Zeichen.",
+      "BadKind": "Achse „{id}“ muss kind = \"ordinal\" oder \"bipolar\" haben.",
+      "BadOptions": "Achse „{id}“ muss genau 3 Optionen haben.",
+      "BadValues": "Die Optionen der Achse „{id}“ müssen die Werte -1, 0 und 1 tragen.",
+      "OptionLabel": "Eine Option der Achse „{id}“ hat eine Beschriftung mit mehr als {max} Zeichen.",
+      "OptionIcon": "Eine Option der Achse „{id}“ hat ein Symbol mit mehr als {max} Zeichen."
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "乐趣",
+        "Low": "一般",
+        "Mid": "还行",
+        "High": "超喜欢"
+      },
+      "Pace": {
+        "Label": "节奏",
+        "Low": "太慢",
+        "Mid": "节奏正好",
+        "High": "太快"
+      },
+      "Roleplay": {
+        "Label": "角色扮演比重",
+        "Low": "不够",
+        "Mid": "刚刚好",
+        "High": "太多"
+      }
+    },
+    "Window": {
+      "Minimize": "最小化",
+      "Maximize": "还原"
+    },
+    "Panel": {
+      "Title": "晴雨表",
+      "Hint": "随时反馈你的感受。再次点击即可撤回你的回答。",
+      "Unset": "未设置",
+      "Flushed": "GM 已重置晴雨表。"
+    },
+    "Summary": {
+      "Title": "晴雨表 — 汇总",
+      "Respondents": "{total} 人中已有 {n} 人回答",
+      "Hidden": "已隐藏：回答少于 {min} 条。",
+      "NoData": "暂无回答。",
+      "Average": "平均值",
+      "Polarized": "意见两极",
+      "PolarizedHint": "玩家同时报告了两个极端：此处的平均值没有意义。",
+      "Flush": "重置",
+      "FlushHint": "清除所有数值，包括你的和玩家的。",
+      "FlushConfirm": "要为整桌玩家重置晴雨表吗？",
+      "Centered": "居中",
+      "EditAxes": "维度",
+      "Unanswered": "未回答"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "GM 也显示面板",
+        "Hint": "向 GM 显示投票面板。GM 的数值也会计入汇总。"
+      },
+      "PlayersSeeSummary": {
+        "Name": "允许玩家打开汇总",
+        "Hint": "让玩家查看与 GM 相同的匿名汇总。"
+      },
+      "MinRespondents": {
+        "Name": "最少回答数",
+        "Hint": "回答数低于此值时，该维度保持隐藏。用于在小团中保护匿名性。"
+      },
+      "RevealDelay": {
+        "Name": "显示延迟（秒）",
+        "Hint": "变更传达给 GM 之前的最大随机延迟，提示圆点和已打开的汇总均适用。0 = 实时。调高此值可切断变更与当时桌面上所发生之事的关联。不会丢失任何数据，只是模糊了时间点。"
+      },
+      "AutoOpen": {
+        "Name": "登录时打开面板",
+        "Hint": "加载世界时自动显示面板。"
+      },
+      "Axes": {
+        "Name": "晴雨表维度",
+        "Hint": "各维度的标签、图标和类型。",
+        "Label": "配置维度",
+        "Title": "晴雨表维度",
+        "EditorIntro": "添加、删除或重新排序你的团所要回答的维度。更改立即生效；保留维度上的回答不会丢失。",
+        "Add": "添加维度",
+        "Remove": "删除此维度",
+        "NamePlaceholder": "维度名称",
+        "LabelPlaceholder": "标签",
+        "PickIcon": "选择图标",
+        "FreeIcon": "或粘贴任意表情符号，然后按回车",
+        "KindBipolar": "居中最佳",
+        "KindOrdinal": "靠右最佳",
+        "KindHint": "双极：两端都是警示，中间是最佳点（节奏、分量）。有序：右端是好的一端（乐趣）。",
+        "Advanced": "高级（JSON）",
+        "AdvancedHint": "此部分展开时，保存将以其内容为准，而非上方的字段。",
+        "EditorHint": "每个维度一个对象。\"kind\" 为 \"bipolar\"（最佳点在中间：节奏、分量）或 \"ordinal\"（最佳点在右侧：乐趣）。三个选项必须分别取值 -1、0 和 1。标签可以是翻译键，也可以是普通文本。",
+        "Reset": "恢复默认维度",
+        "Save": "保存",
+        "NeedsName": "每个维度都必须有名称才能保存。",
+        "Invalid": "无效的 JSON：{error}",
+        "Saved": "维度已保存。"
+      }
+    },
+    "Notify": {
+      "NoGM": "没有 GM 在线：GM 连接后会立即发送你的设置。"
+    },
+    "Validation": {
+      "Root": "根节点必须是非空数组。",
+      "TooMany": "最多 {max} 个维度（当前 {count} 个）。",
+      "NoId": "每个维度都需要一个文本 'id'。",
+      "BadId": "维度 id '{id}' 不得超过 {max} 个字符，且只能包含字母、数字、- 和 _。",
+      "ForbiddenId": "'{id}' 不能用作维度 id。",
+      "DuplicateId": "维度 id 重复：'{id}'。",
+      "NoLabel": "维度 '{id}' 没有 'label'。",
+      "BadLabel": "维度 '{id}' 的标签不得超过 {max} 个字符。",
+      "BadKind": "维度 '{id}' 的 kind 必须为 \"ordinal\" 或 \"bipolar\"。",
+      "BadOptions": "维度 '{id}' 必须恰好有 3 个选项。",
+      "BadValues": "维度 '{id}' 的选项必须取值 -1、0 和 1。",
+      "OptionLabel": "维度 '{id}' 的某个选项标签超过 {max} 个字符。",
+      "OptionIcon": "维度 '{id}' 的某个选项图标超过 {max} 个字符。"
+    }
+  }
+}

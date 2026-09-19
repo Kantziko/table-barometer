@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Zabawa",
+        "Low": "Takie sobie",
+        "Mid": "W porządku",
+        "High": "Uwielbiam"
+      },
+      "Pace": {
+        "Label": "Tempo",
+        "Low": "Za wolno",
+        "Mid": "Dobre tempo",
+        "High": "Za szybko"
+      },
+      "Roleplay": {
+        "Label": "Ilość odgrywania",
+        "Low": "Za mało",
+        "Mid": "Dobra równowaga",
+        "High": "Za dużo"
+      }
+    },
+    "Window": {
+      "Minimize": "Zminimalizuj",
+      "Maximize": "Przywróć"
+    },
+    "Panel": {
+      "Title": "Barometr",
+      "Hint": "Jak się czujesz, w dowolnej chwili. Kliknij ponownie, aby wycofać odpowiedź.",
+      "Unset": "Nie ustawiono",
+      "Flushed": "MG zresetował barometr."
+    },
+    "Summary": {
+      "Title": "Barometr — podsumowanie",
+      "Respondents": "Odpowiedzi: {n} z {total}",
+      "Hidden": "Ukryte: mniej niż {min} odpowiedzi.",
+      "NoData": "Brak odpowiedzi.",
+      "Average": "Średnia",
+      "Polarized": "Podzielony stół",
+      "PolarizedHint": "Gracze zgłaszają jednocześnie oba skrajne końce: średnia nic tu nie znaczy.",
+      "Flush": "Resetuj",
+      "FlushHint": "Czyści wszystkie wartości, twoje i graczy.",
+      "FlushConfirm": "Zresetować barometr dla całego stołu?",
+      "Centered": "wyśrodkowany",
+      "EditAxes": "Osie",
+      "Unanswered": "brak odpowiedzi"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "MG również dostaje paletę",
+        "Hint": "Pokazuje MG paletę głosowania. Jego wartość jest wtedy liczona w podsumowaniu."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Gracze mogą otworzyć podsumowanie",
+        "Hint": "Daje graczom dostęp do tego samego zanonimizowanego podsumowania, co MG."
+      },
+      "MinRespondents": {
+        "Name": "Minimalna liczba odpowiedzi",
+        "Hint": "Poniżej tej liczby odpowiedzi oś pozostaje ukryta. Chroni anonimowość przy małych stołach."
+      },
+      "RevealDelay": {
+        "Name": "Opóźnienie ujawnienia (sekundy)",
+        "Hint": "Maksymalne losowe opóźnienie, zanim zmiana dotrze do MG — zarówno kropka powiadomienia, jak i otwarte podsumowanie. 0 = czas rzeczywisty. Zwiększenie go zrywa związek między zmianą a tym, co działo się w danej chwili. Nic nie ginie, zaciera się tylko moment."
+      },
+      "AutoOpen": {
+        "Name": "Otwieraj paletę po zalogowaniu",
+        "Hint": "Paleta pojawia się automatycznie po wczytaniu świata."
+      },
+      "Axes": {
+        "Name": "Osie barometru",
+        "Hint": "Etykiety, ikony i rodzaj każdej osi.",
+        "Label": "Konfiguruj osie",
+        "Title": "Osie barometru",
+        "EditorIntro": "Dodawaj, usuwaj lub zmieniaj kolejność osi, na które odpowiada twój stół. Zmiany działają od razu; odpowiedzi na zachowanych osiach zostają.",
+        "Add": "Dodaj oś",
+        "Remove": "Usuń tę oś",
+        "NamePlaceholder": "Nazwa osi",
+        "LabelPlaceholder": "Etykieta",
+        "PickIcon": "Wybierz ikonę",
+        "FreeIcon": "Lub wklej dowolne emoji i naciśnij Enter",
+        "KindBipolar": "Najlepszy środek",
+        "KindOrdinal": "Najlepsza prawa strona",
+        "KindHint": "Dwubiegunowa: oba końce to sygnały ostrzegawcze, a środek to ideał (tempo, dawkowanie). Porządkowa: dobry jest prawy koniec (zabawa).",
+        "Advanced": "Zaawansowane (JSON)",
+        "AdvancedHint": "Dopóki ta sekcja jest otwarta, przy zapisie jej zawartość ma pierwszeństwo przed polami powyżej.",
+        "EditorHint": "Jeden obiekt na oś. \"kind\" to \"bipolar\" (optimum w środku: tempo, dawkowanie) albo \"ordinal\" (optimum po prawej: zabawa). Trzy opcje muszą mieć wartości -1, 0 i 1. Etykieta może być kluczem tłumaczenia lub zwykłym tekstem.",
+        "Reset": "Przywróć domyślne osie",
+        "Save": "Zapisz",
+        "NeedsName": "Każda oś musi mieć nazwę przed zapisaniem.",
+        "Invalid": "Nieprawidłowy JSON: {error}",
+        "Saved": "Osie zapisane."
+      }
+    },
+    "Notify": {
+      "NoGM": "Brak połączonego MG: twoje ustawienie zostanie wysłane, gdy tylko ktoś się połączy."
+    },
+    "Validation": {
+      "Root": "Korzeń musi być niepustą tablicą.",
+      "TooMany": "Maksymalnie {max} osi (podano {count}).",
+      "NoId": "Każda oś potrzebuje tekstowego 'id'.",
+      "BadId": "Id osi '{id}' może mieć najwyżej {max} znaków: tylko litery, cyfry, - i _.",
+      "ForbiddenId": "'{id}' nie może być użyte jako id osi.",
+      "DuplicateId": "Zduplikowane id osi: '{id}'.",
+      "NoLabel": "Oś '{id}' nie ma 'label'.",
+      "BadLabel": "Oś '{id}' potrzebuje etykiety o długości najwyżej {max} znaków.",
+      "BadKind": "Oś '{id}' musi mieć kind = \"ordinal\" lub \"bipolar\".",
+      "BadOptions": "Oś '{id}' musi mieć dokładnie 3 opcje.",
+      "BadValues": "Opcje osi '{id}' muszą mieć wartości -1, 0 i 1.",
+      "OptionLabel": "Opcja osi '{id}' ma etykietę dłuższą niż {max} znaków.",
+      "OptionIcon": "Opcja osi '{id}' ma ikonę dłuższą niż {max} znaków."
+    }
+  }
+}

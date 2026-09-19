@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Diversão",
+        "Low": "Meh",
+        "Mid": "Tranquilo",
+        "High": "Adorando"
+      },
+      "Pace": {
+        "Label": "Ritmo",
+        "Low": "Lento demais",
+        "Mid": "Bom ritmo",
+        "High": "Rápido demais"
+      },
+      "Roleplay": {
+        "Label": "Quantidade de interpretação",
+        "Low": "Pouca",
+        "Mid": "Bom equilíbrio",
+        "High": "Demais"
+      }
+    },
+    "Window": {
+      "Minimize": "Minimizar",
+      "Maximize": "Restaurar"
+    },
+    "Panel": {
+      "Title": "Barômetro",
+      "Hint": "Como você está se sentindo, a qualquer momento. Clique de novo para retirar sua resposta.",
+      "Unset": "Não definido",
+      "Flushed": "O mestre zerou o barômetro."
+    },
+    "Summary": {
+      "Title": "Barômetro — resumo",
+      "Respondents": "{n} de {total} responderam",
+      "Hidden": "Oculto: menos de {min} respostas.",
+      "NoData": "Nenhuma resposta ainda.",
+      "Average": "Média",
+      "Polarized": "Mesa dividida",
+      "PolarizedHint": "Há jogadores indicando os dois extremos ao mesmo tempo: aqui a média não quer dizer nada.",
+      "Flush": "Zerar",
+      "FlushHint": "Apaga todos os valores, os seus e os dos jogadores.",
+      "FlushConfirm": "Zerar o barômetro para a mesa inteira?",
+      "Centered": "centralizado",
+      "EditAxes": "Eixos",
+      "Unanswered": "sem resposta"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "O mestre também recebe a paleta",
+        "Hint": "Mostra a paleta de votação ao mestre. O valor dele passa a contar no resumo."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Jogadores podem abrir o resumo",
+        "Hint": "Dá aos jogadores acesso ao mesmo resumo anônimo que o mestre vê."
+      },
+      "MinRespondents": {
+        "Name": "Mínimo de respostas",
+        "Hint": "Abaixo desse número de respostas, o eixo fica oculto. Protege o anonimato em mesas pequenas."
+      },
+      "RevealDelay": {
+        "Name": "Atraso de revelação (segundos)",
+        "Hint": "Atraso aleatório máximo antes de uma mudança chegar ao mestre, tanto no ponto de alerta quanto no resumo aberto. 0 = tempo real. Aumentar esse valor desfaz a ligação entre uma mudança e o que estava acontecendo naquele momento. Nada se perde, só o momento fica embaralhado."
+      },
+      "AutoOpen": {
+        "Name": "Abrir a paleta ao entrar",
+        "Hint": "A paleta aparece automaticamente quando o mundo carrega."
+      },
+      "Axes": {
+        "Name": "Eixos do barômetro",
+        "Hint": "Rótulos, ícones e tipo de cada eixo.",
+        "Label": "Configurar eixos",
+        "Title": "Eixos do barômetro",
+        "EditorIntro": "Adicione, remova ou reordene os eixos em que sua mesa responde. As mudanças valem na hora; as respostas dos eixos mantidos são preservadas.",
+        "Add": "Adicionar um eixo",
+        "Remove": "Remover este eixo",
+        "NamePlaceholder": "Nome do eixo",
+        "LabelPlaceholder": "Rótulo",
+        "PickIcon": "Escolher um ícone",
+        "FreeIcon": "Ou cole qualquer emoji e pressione Enter",
+        "KindBipolar": "O meio é o ideal",
+        "KindOrdinal": "A direita é o ideal",
+        "KindHint": "Bipolar: as duas pontas são alertas e o meio é o ponto ideal (ritmo, dosagem). Ordinal: a ponta direita é a boa (diversão).",
+        "Advanced": "Avançado (JSON)",
+        "AdvancedHint": "Enquanto esta seção estiver aberta, o conteúdo dela tem prioridade sobre os campos acima ao salvar.",
+        "EditorHint": "Um objeto por eixo. \"kind\" é \"bipolar\" (o ideal fica no meio: ritmo, dosagem) ou \"ordinal\" (o ideal fica à direita: diversão). As três opções devem ter os valores -1, 0 e 1. Um rótulo pode ser uma chave de tradução ou texto simples.",
+        "Reset": "Voltar aos eixos padrão",
+        "Save": "Salvar",
+        "NeedsName": "Todo eixo precisa de um nome antes de salvar.",
+        "Invalid": "JSON inválido: {error}",
+        "Saved": "Eixos salvos."
+      }
+    },
+    "Notify": {
+      "NoGM": "Nenhum mestre conectado: sua configuração será enviada assim que um se conectar."
+    },
+    "Validation": {
+      "Root": "A raiz deve ser um array não vazio.",
+      "TooMany": "No máximo {max} eixos (há {count}).",
+      "NoId": "Todo eixo precisa de um 'id' em texto.",
+      "BadId": "O id de eixo '{id}' deve ter no máximo {max} caracteres: apenas letras, dígitos, - e _.",
+      "ForbiddenId": "'{id}' não pode ser usado como id de eixo.",
+      "DuplicateId": "Id de eixo duplicado: '{id}'.",
+      "NoLabel": "O eixo '{id}' não tem 'label'.",
+      "BadLabel": "O eixo '{id}' precisa de um rótulo com no máximo {max} caracteres.",
+      "BadKind": "O eixo '{id}' deve ter kind = \"ordinal\" ou \"bipolar\".",
+      "BadOptions": "O eixo '{id}' deve ter exatamente 3 opções.",
+      "BadValues": "As opções do eixo '{id}' devem ter os valores -1, 0 e 1.",
+      "OptionLabel": "Uma opção do eixo '{id}' tem um rótulo com mais de {max} caracteres.",
+      "OptionIcon": "Uma opção do eixo '{id}' tem um ícone com mais de {max} caracteres."
+    }
+  }
+}

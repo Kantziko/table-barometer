@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Divertimento",
+        "Low": "Mah",
+        "Mid": "Bene",
+        "High": "Adoro"
+      },
+      "Pace": {
+        "Label": "Ritmo",
+        "Low": "Troppo lento",
+        "Mid": "Buon ritmo",
+        "High": "Troppo veloce"
+      },
+      "Roleplay": {
+        "Label": "Quantità di interpretazione",
+        "Low": "Troppo poca",
+        "Mid": "Giusto equilibrio",
+        "High": "Troppa"
+      }
+    },
+    "Window": {
+      "Minimize": "Riduci",
+      "Maximize": "Ripristina"
+    },
+    "Panel": {
+      "Title": "Barometro",
+      "Hint": "Come ti senti, in qualsiasi momento. Clicca di nuovo per ritirare la tua risposta.",
+      "Unset": "Non impostato",
+      "Flushed": "Il master ha azzerato il barometro."
+    },
+    "Summary": {
+      "Title": "Barometro — riepilogo",
+      "Respondents": "{n} su {total} hanno risposto",
+      "Hidden": "Nascosto: meno di {min} risposte.",
+      "NoData": "Ancora nessuna risposta.",
+      "Average": "Media",
+      "Polarized": "Tavolo diviso",
+      "PolarizedHint": "Alcuni giocatori segnalano entrambi gli estremi contemporaneamente: qui la media non significa nulla.",
+      "Flush": "Azzera",
+      "FlushHint": "Cancella tutti i valori, i tuoi e quelli dei giocatori.",
+      "FlushConfirm": "Azzerare il barometro per tutto il tavolo?",
+      "Centered": "centrato",
+      "EditAxes": "Assi",
+      "Unanswered": "nessuna risposta"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "Anche il master ha la tavolozza",
+        "Hint": "Mostra la tavolozza di voto al master. Il suo valore viene quindi conteggiato nel riepilogo."
+      },
+      "PlayersSeeSummary": {
+        "Name": "I giocatori possono aprire il riepilogo",
+        "Hint": "Dà ai giocatori accesso allo stesso riepilogo anonimo del master."
+      },
+      "MinRespondents": {
+        "Name": "Soglia minima di risposte",
+        "Hint": "Sotto questo numero di risposte, l'asse resta nascosto. Protegge l'anonimato ai tavoli piccoli."
+      },
+      "RevealDelay": {
+        "Name": "Ritardo di rivelazione (secondi)",
+        "Hint": "Ritardo casuale massimo prima che una modifica raggiunga il master, sia il punto di avviso sia il riepilogo aperto. 0 = tempo reale. Aumentarlo scollega una modifica da ciò che stava accadendo in quel momento. Non si perde nulla, solo il momento viene sfumato."
+      },
+      "AutoOpen": {
+        "Name": "Apri la tavolozza all'accesso",
+        "Hint": "La tavolozza compare automaticamente al caricamento del mondo."
+      },
+      "Axes": {
+        "Name": "Assi del barometro",
+        "Hint": "Etichette, icone e tipo di ciascun asse.",
+        "Label": "Configura gli assi",
+        "Title": "Assi del barometro",
+        "EditorIntro": "Aggiungi, rimuovi o riordina gli assi su cui risponde il tuo tavolo. Le modifiche sono immediate; le risposte sugli assi mantenuti vengono conservate.",
+        "Add": "Aggiungi un asse",
+        "Remove": "Rimuovi questo asse",
+        "NamePlaceholder": "Nome dell'asse",
+        "LabelPlaceholder": "Etichetta",
+        "PickIcon": "Scegli un'icona",
+        "FreeIcon": "Oppure incolla un'emoji qualsiasi, poi Invio",
+        "KindBipolar": "Il centro è l'ideale",
+        "KindOrdinal": "La destra è l'ideale",
+        "KindHint": "Bipolare: entrambi gli estremi sono segnali d'allarme e il centro è il punto ideale (ritmo, dosaggio). Ordinale: l'estremo destro è quello buono (divertimento).",
+        "Advanced": "Avanzate (JSON)",
+        "AdvancedHint": "Finché questa sezione è aperta, al salvataggio il suo contenuto ha la precedenza sui campi qui sopra.",
+        "EditorHint": "Un oggetto per asse. \"kind\" vale \"bipolar\" (l'ottimo è al centro: ritmo, dosaggio) oppure \"ordinal\" (l'ottimo è a destra: divertimento). Le tre opzioni devono avere i valori -1, 0 e 1. Un'etichetta può essere una chiave di traduzione o testo semplice.",
+        "Reset": "Torna agli assi predefiniti",
+        "Save": "Salva",
+        "NeedsName": "Ogni asse deve avere un nome prima di poter salvare.",
+        "Invalid": "JSON non valido: {error}",
+        "Saved": "Assi salvati."
+      }
+    },
+    "Notify": {
+      "NoGM": "Nessun master connesso: la tua impostazione verrà inviata appena se ne connette uno."
+    },
+    "Validation": {
+      "Root": "La radice deve essere un array non vuoto.",
+      "TooMany": "Al massimo {max} assi (ricevuti {count}).",
+      "NoId": "Ogni asse ha bisogno di un 'id' testuale.",
+      "BadId": "L'id d'asse '{id}' deve avere al massimo {max} caratteri: solo lettere, cifre, - e _.",
+      "ForbiddenId": "'{id}' non può essere usato come id d'asse.",
+      "DuplicateId": "Id d'asse duplicato: '{id}'.",
+      "NoLabel": "L'asse '{id}' non ha 'label'.",
+      "BadLabel": "L'asse '{id}' richiede un'etichetta di al massimo {max} caratteri.",
+      "BadKind": "L'asse '{id}' deve avere kind = \"ordinal\" o \"bipolar\".",
+      "BadOptions": "L'asse '{id}' deve avere esattamente 3 opzioni.",
+      "BadValues": "Le opzioni dell'asse '{id}' devono avere i valori -1, 0 e 1.",
+      "OptionLabel": "Un'opzione dell'asse '{id}' ha un'etichetta più lunga di {max} caratteri.",
+      "OptionIcon": "Un'opzione dell'asse '{id}' ha un'icona più lunga di {max} caratteri."
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Plaisir",
+        "Low": "Bof",
+        "Mid": "Ça va",
+        "High": "J'adore"
+      },
+      "Pace": {
+        "Label": "Rythme",
+        "Low": "Trop lent",
+        "Mid": "Bon rythme",
+        "High": "Trop rapide"
+      },
+      "Roleplay": {
+        "Label": "Dose de RP",
+        "Low": "Pas assez",
+        "Mid": "Bon dosage",
+        "High": "Trop"
+      }
+    },
+    "Window": {
+      "Minimize": "Réduire",
+      "Maximize": "Rouvrir"
+    },
+    "Panel": {
+      "Title": "Baromètre",
+      "Hint": "Ton ressenti, à tout moment. Re-clique pour retirer ton avis.",
+      "Unset": "Non renseigné",
+      "Flushed": "Le MJ a réinitialisé le baromètre."
+    },
+    "Summary": {
+      "Title": "Baromètre — synthèse",
+      "Respondents": "{n} réponse(s) sur {total}",
+      "Hidden": "Masqué : moins de {min} réponses.",
+      "NoData": "Aucune réponse pour l'instant.",
+      "Average": "Moyenne",
+      "Polarized": "Table polarisée",
+      "PolarizedHint": "Des joueurs signalent les deux extrêmes en même temps : la moyenne ne veut rien dire ici.",
+      "Flush": "Réinitialiser",
+      "FlushHint": "Efface toutes les valeurs, chez toi et chez les joueurs.",
+      "FlushConfirm": "Réinitialiser le baromètre pour toute la table ?",
+      "Centered": "centré",
+      "EditAxes": "Axes",
+      "Unanswered": "sans réponse"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "Le MJ dispose aussi de la palette",
+        "Hint": "Affiche la palette de vote au MJ. Sa valeur est alors comptée dans la synthèse."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Les joueurs peuvent ouvrir la synthèse",
+        "Hint": "Donne aux joueurs l'accès à la même synthèse anonymisée que le MJ."
+      },
+      "MinRespondents": {
+        "Name": "Seuil minimum de réponses",
+        "Hint": "En dessous de ce nombre de réponses, l'axe reste masqué. Protège l'anonymat sur les petites tables."
+      },
+      "RevealDelay": {
+        "Name": "Délai de révélation (secondes)",
+        "Hint": "Retard maximum, aléatoire, avant qu'un changement ne parvienne au MJ — aussi bien la pastille que la synthèse ouverte. 0 = temps réel. Augmenter ce délai casse le lien entre un changement et ce qui se passait à cet instant à la table. Rien n'est perdu, seul le moment est brouillé."
+      },
+      "AutoOpen": {
+        "Name": "Ouvrir la palette à la connexion",
+        "Hint": "La palette s'affiche automatiquement au chargement du monde."
+      },
+      "Axes": {
+        "Name": "Axes du baromètre",
+        "Hint": "Libellés, icônes et nature des axes.",
+        "Label": "Configurer les axes",
+        "Title": "Axes du baromètre",
+        "EditorIntro": "Ajoute, retire ou réordonne les axes sur lesquels ta table répond. Les changements sont immédiats ; les réponses aux axes conservés le sont aussi.",
+        "Add": "Ajouter un axe",
+        "Remove": "Retirer cet axe",
+        "NamePlaceholder": "Nom de l'axe",
+        "LabelPlaceholder": "Libellé",
+        "PickIcon": "Choisir une icône",
+        "FreeIcon": "Ou colle n'importe quel emoji, puis Entrée",
+        "KindBipolar": "Centre = optimum",
+        "KindOrdinal": "Droite = optimum",
+        "KindHint": "Bipolaire : les deux extrêmes sont des alertes et le centre est le bon réglage (rythme, dosage). Ordinal : c'est la droite qui est bonne (plaisir).",
+        "Advanced": "Avancé (JSON)",
+        "AdvancedHint": "Tant que cette section est dépliée, son contenu prime sur les champs ci-dessus au moment d'enregistrer.",
+        "EditorHint": "Un objet par axe. « kind » vaut « bipolar » (l'optimum est au centre : rythme, dosage) ou « ordinal » (l'optimum est à droite : plaisir). Les trois options doivent porter les valeurs -1, 0 et 1. Un libellé peut être une clé de traduction ou du texte brut.",
+        "Reset": "Revenir aux axes par défaut",
+        "Save": "Enregistrer",
+        "NeedsName": "Chaque axe doit avoir un nom avant l'enregistrement.",
+        "Invalid": "JSON invalide : {error}",
+        "Saved": "Axes enregistrés."
+      }
+    },
+    "Notify": {
+      "NoGM": "Aucun MJ connecté : ton réglage sera transmis dès qu'un MJ se connectera."
+    },
+    "Validation": {
+      "Root": "La racine doit être un tableau non vide.",
+      "TooMany": "{max} axes au maximum ({count} fournis).",
+      "NoId": "Chaque axe doit avoir un « id » textuel.",
+      "BadId": "L'id d'axe « {id} » doit faire {max} caractères au plus : lettres, chiffres, - et _ uniquement.",
+      "ForbiddenId": "« {id} » ne peut pas servir d'id d'axe.",
+      "DuplicateId": "Id d'axe en double : « {id} ».",
+      "NoLabel": "L'axe « {id} » n'a pas de « label ».",
+      "BadLabel": "L'axe « {id} » doit avoir un libellé de {max} caractères au plus.",
+      "BadKind": "L'axe « {id} » doit avoir kind = \"ordinal\" ou \"bipolar\".",
+      "BadOptions": "L'axe « {id} » doit avoir exactement 3 options.",
+      "BadValues": "Les options de l'axe « {id} » doivent porter les valeurs -1, 0 et 1.",
+      "OptionLabel": "Une option de l'axe « {id} » a un libellé de plus de {max} caractères.",
+      "OptionIcon": "Une option de l'axe « {id} » a une icône de plus de {max} caractères."
+    }
+  }
+}
