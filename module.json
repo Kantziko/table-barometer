@@ -1,7 +1,7 @@
 {
   "id": "table-barometer",
   "title": "Table Barometer",
-  "description": "An always-on palette where players signal how they feel about the session — fun, pace, amount of roleplay — on three-position toggles. The GM gets an anonymized summary showing the distribution, not just the average. Nothing is stored or historized.",
+  "description": "Tracks your players' feelings about fun, pace and RP, anonymously.",
   "version": "1.1.1",
   "compatibility": {
     "minimum": "13",
