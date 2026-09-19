@@ -91,33 +91,21 @@ Icons are plain emoji, rendered by the operating system — no asset to ship.
 
 ## Languages
 
-The interface ships in ten languages. Each client sees it in the language chosen
-in its own Foundry settings (*Configure Settings → Core → Language*), and falls
-back to English for any other language.
+The interface ships in **English** (`en`) and **French** (`fr`). Each client
+sees it in the language chosen in its own Foundry settings (*Configure Settings
+→ Core → Language*), and falls back to English for any other language.
 
-| Language | Code |
-|---|---|
-| English | `en` |
-| Deutsch | `de` |
-| Français | `fr` |
-| Español | `es` |
-| Português (Brasil) | `pt-BR` |
-| Polski | `pl` |
-| Italiano | `it` |
-| 中文（简体） | `cn` |
-| 日本語 | `ja` |
-| 한국어 | `ko` |
+**Translations wanted.** Draft translations into German, Spanish, Brazilian
+Portuguese, Polish, Italian, Simplified Chinese, Japanese and Korean wait in
+`translations-pending/`. They were produced with AI assistance, so they are not
+shipped until a native speaker has reviewed them, as Foundry's AI content policy
+requires. If you speak one of these languages, please open an issue or a pull
+request: a review of 77 short strings is all it takes.
 
-Foundry only offers a language in that menu once a translation of its core is
-installed; Simplified Chinese uses the code `cn`, as the community core
-translation does.
-
-The German, Spanish, Brazilian Portuguese, Polish, Italian, Chinese, Japanese
-and Korean files were produced with AI assistance and have not yet been reviewed
-by native speakers. Corrections are welcome. To add or fix a language, copy
-`lang/en.json`, translate the values only — never the keys, and keep every
-`{placeholder}` as is — then declare the file under `languages` in
-`module.json`.
+To review or add a language, start from `lang/en.json`, translate the values
+only — never the keys, and keep every `{placeholder}` as is — then place the
+file in `lang/` and declare it under `languages` in `module.json`. Simplified
+Chinese uses the code `cn`, as Foundry's community core translation does.
 
 The shipped axes carry translation keys, so each client reads them in their own
 language. The editor shows you the translated text but keeps the key underneath:
@@ -198,6 +186,7 @@ scripts/axes-editor.js   axis editor
 scripts/utils.js         HTML escaping
 styles/barometer.css     palette, summary and editor styles
 lang/*.json              interface strings, one file per language
+translations-pending/    draft translations awaiting native review (not shipped)
 docs/                    screenshots for this page (not shipped in the zip)
 ```
 
