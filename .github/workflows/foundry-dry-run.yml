@@ -9,6 +9,10 @@ on:
       tag:
         description: Release tag to check (e.g. v1.1.1)
         required: true
+      version:
+        description: Version number to test instead of the release's own. Foundry rejects a version it already lists, so use an unused one (e.g. 999.0.0) to check the token.
+        required: false
+        default: ""
 
 jobs:
   check:
@@ -16,6 +20,7 @@ jobs:
     env:
       FOUNDRY_TOKEN: ${{ secrets.FOUNDRY_RELEASE_TOKEN }}
       TAG: ${{ inputs.tag }}
+      VERSION_OVERRIDE: ${{ inputs.version }}
       REPO: ${{ github.repository }}
     steps:
       - name: Fetch the released manifest
@@ -29,8 +34,10 @@ jobs:
           fi
           jq --arg m "https://github.com/$REPO/releases/download/$TAG/module.json" \
              --arg n "https://github.com/$REPO/releases/tag/$TAG" \
+             --arg v "$VERSION_OVERRIDE" \
              '{id: .id, "dry-run": true,
-               release: {version: .version, manifest: $m, notes: $n,
+               release: {version: (if $v == "" then .version else $v end),
+               manifest: $m, notes: $n,
                compatibility: {minimum: .compatibility.minimum,
                                verified: .compatibility.verified,
                                maximum: (.compatibility.maximum // "")}}}' \
