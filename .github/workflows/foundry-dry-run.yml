@@ -1,0 +1,42 @@
+# Checks the FOUNDRY_RELEASE_TOKEN secret and the announcement payload without
+# publishing anything: Foundry validates a dry run and saves nothing.
+# Run it by hand from the Actions tab, e.g. after changing the token.
+name: Foundry dry run
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to check (e.g. v1.1.1)
+        required: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      FOUNDRY_TOKEN: ${{ secrets.FOUNDRY_RELEASE_TOKEN }}
+      TAG: ${{ inputs.tag }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Fetch the released manifest
+        run: curl -sSfL -o module.json "https://github.com/$REPO/releases/download/$TAG/module.json"
+
+      - name: Dry-run the announcement
+        run: |
+          if [ -z "$FOUNDRY_TOKEN" ]; then
+            echo "::error::The FOUNDRY_RELEASE_TOKEN secret is not set."
+            exit 1
+          fi
+          jq --arg m "https://github.com/$REPO/releases/download/$TAG/module.json" \
+             --arg n "https://github.com/$REPO/releases/tag/$TAG" \
+             '{id: .id, "dry-run": true,
+               release: {version: .version, manifest: $m, notes: $n,
+               compatibility: {minimum: .compatibility.minimum,
+                               verified: .compatibility.verified,
+                               maximum: (.compatibility.maximum // "")}}}' \
+             module.json > payload.json
+          cat payload.json
+          curl -sS --fail-with-body -X POST https://foundryvtt.com/_api/packages/release_version/ \
+               -H "Content-Type: application/json" \
+               -H "Authorization: $FOUNDRY_TOKEN" \
+               --data @payload.json

@@ -1,5 +1,8 @@
-# Builds module.zip and attaches it, with module.json, to each published release.
+# Builds module.zip and attaches it, with module.json, to each published release,
+# then announces the version on foundryvtt.com through the Package Release API.
 # The release tag (e.g. v1.2.0) sets the version: no need to edit module.json by hand.
+# The announcement needs the FOUNDRY_RELEASE_TOKEN repository secret; without it,
+# that step is skipped and the release still goes through.
 name: Release
 
 on:
@@ -12,6 +15,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FOUNDRY_TOKEN: ${{ secrets.FOUNDRY_RELEASE_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -34,3 +39,22 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
         run: gh release upload "$TAG" module.json module.zip --clobber
+
+      - name: Announce the version on foundryvtt.com
+        if: env.FOUNDRY_TOKEN != ''
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          jq --arg m "https://github.com/$REPO/releases/download/$TAG/module.json" \
+             --arg n "https://github.com/$REPO/releases/tag/$TAG" \
+             '{id: .id, release: {version: .version, manifest: $m, notes: $n,
+               compatibility: {minimum: .compatibility.minimum,
+                               verified: .compatibility.verified,
+                               maximum: (.compatibility.maximum // "")}}}' \
+             module.json > payload.json
+          cat payload.json
+          curl -sS --fail-with-body -X POST https://foundryvtt.com/_api/packages/release_version/ \
+               -H "Content-Type: application/json" \
+               -H "Authorization: $FOUNDRY_TOKEN" \
+               --data @payload.json
