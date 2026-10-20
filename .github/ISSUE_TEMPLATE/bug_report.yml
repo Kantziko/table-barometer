@@ -1,0 +1,79 @@
+name: Bug report
+description: Something in the module does not behave as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The three version fields below are what make
+        a report actionable — without them a bug usually takes several rounds of
+        questions before anyone can even try to reproduce it.
+
+  - type: input
+    id: foundry-version
+    attributes:
+      label: Foundry version
+      description: Shown at the bottom of the Setup screen, e.g. 14.365.
+      placeholder: "14.365"
+    validations:
+      required: true
+
+  - type: input
+    id: module-version
+    attributes:
+      label: Table Barometer version
+      description: Settings → Manage Modules, next to the module's name.
+      placeholder: "1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: game-system
+    attributes:
+      label: Game system
+      description: Which system the world runs, and its version.
+      placeholder: "dnd5e 4.1.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Number them if you can. Say whether it happened to the GM, to a player,
+        or to both — this module behaves differently on each side.
+      placeholder: |
+        1. Open the summary as GM
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: |
+        Press F12, open the Console tab, reproduce the problem, and paste
+        anything in red. Often this alone identifies the cause.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: isolation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked whether the problem still happens with other modules disabled.
+          required: false
+        - label: I searched the existing issues for the same problem.
+          required: false

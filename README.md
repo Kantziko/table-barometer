@@ -95,12 +95,13 @@ Icons are plain emoji, rendered by the operating system — no asset to ship.
 
 ## Languages
 
-The interface ships in **English** (`en`) and **French** (`fr`). Each client
-sees it in the language chosen in its own Foundry settings (*Configure Settings
-→ Core → Language*), and falls back to English for any other language.
+The interface ships in **English** (`en`), **French** (`fr`) and **German**
+(`de`, reviewed by [@CePeU](https://github.com/CePeU)). Each client sees it in
+the language chosen in its own Foundry settings (*Configure Settings → Core →
+Language*), and falls back to English for any other language.
 
-**Translations wanted.** Draft translations into German, Spanish, Brazilian
-Portuguese, Polish, Italian, Simplified Chinese, Japanese and Korean wait in
+**Translations wanted.** Draft translations into Spanish, Brazilian Portuguese,
+Polish, Italian, Simplified Chinese, Japanese and Korean wait in
 `translations-pending/`. They were produced with AI assistance, so they are not
 shipped until a native speaker has reviewed them, as Foundry's AI content policy
 requires. If you speak one of these languages, please open an issue or a pull
@@ -116,6 +117,18 @@ language. The editor shows you the translated text but keeps the key underneath:
 opening it and saving changes nothing, and renaming one axis leaves the others
 translatable. A label you actually type is stored as plain text and shown as-is
 to everyone — which is what you want for an axis of your own.
+
+## Reporting a problem
+
+Open an issue at
+[github.com/Kantziko/table-barometer/issues](https://github.com/Kantziko/table-barometer/issues).
+The form asks for your Foundry version, the module version and the steps you
+took: those three are what decide whether a bug can be reproduced at all, rather
+than guessed at over several rounds of questions.
+
+Console errors help more than anything else. Press F12, open the Console tab,
+reproduce the problem, and paste whatever appears in red — it usually names the
+file and the line.
 
 ## What this module guarantees — and what it does not
 

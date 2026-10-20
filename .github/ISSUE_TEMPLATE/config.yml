@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Review or add a translation
+    url: https://github.com/Kantziko/table-barometer/blob/main/README.md#languages
+    about: >-
+      Draft translations wait in translations-pending/ for a native speaker.
+      Reviewing one is 77 short strings — the README explains how, and a pull
+      request is welcome.
