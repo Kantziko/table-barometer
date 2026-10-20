@@ -64,7 +64,7 @@ body:
       description: |
         Press F12, open the Console tab, reproduce the problem, and paste
         anything in red. Often this alone identifies the cause.
-      render: text
+      render: javascript
     validations:
       required: false
 
