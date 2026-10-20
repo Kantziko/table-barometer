@@ -1,0 +1,113 @@
+{
+  "TB": {
+    "Axes": {
+      "Fun": {
+        "Label": "Spielspaß",
+        "Low": "Ging so",
+        "Mid": "Ganz gut",
+        "High": "Machte riesigen Spaß"
+      },
+      "Pace": {
+        "Label": "Spieltempo",
+        "Low": "Zu langsam",
+        "Mid": "Genau richtig",
+        "High": "Zu schnell"
+      },
+      "Roleplay": {
+        "Label": "Rollenspielanteil",
+        "Low": "Zu wenig",
+        "Mid": "Gute Balance",
+        "High": "Zu viel"
+      }
+    },
+    "Window": {
+      "Minimize": "Minimieren",
+      "Maximize": "Wiederherstellen"
+    },
+    "Panel": {
+      "Title": "Barometer",
+      "Hint": "Wie du die Spielsitzung gerade bewertest? Du kannst jederzeit abstimmen. Klicke erneut, um deine Bewertung zurückzunehmen.",
+      "Unset": "Nicht gesetzt",
+      "Flushed": "Der Spielleiter hat das Barometer zurückgesetzt."
+    },
+    "Summary": {
+      "Title": "Barometer — Übersicht",
+      "Respondents": "{n} von {total} haben abgestimmt",
+      "Hidden": "Ausgeblendet: Weniger als {min} Bewertungen.",
+      "NoData": "Noch keine Bewertungen vorhanden.",
+      "Average": "Durchschnitt",
+      "Polarized": "Gespaltene Meinungen",
+      "PolarizedHint": "Extrembewertungen der Spieler an beiden Enden. Der Durchschnitt ist daher hier nicht aussagekräftig.",
+      "Flush": "Zurücksetzen",
+      "FlushHint": "Löscht sämtliche Bewertungen, sowohl deine eigenen als auch die der Spieler.",
+      "FlushConfirm": "Das Barometer für die gesamte Spielsitzung zurücksetzen?",
+      "Centered": "ausgeglichen",
+      "EditAxes": "Achsen",
+      "Unanswered": "Keine Bewertung"
+    },
+    "Settings": {
+      "GmVotes": {
+        "Name": "Spielleiter kann ebenfalls bewerten",
+        "Hint": "Zeigt der Spielleitung ebenfalls die Bewertungsfragen an. Ihre Bewertung wird dann in der Übersicht berücksichtigt."
+      },
+      "PlayersSeeSummary": {
+        "Name": "Spieler dürfen die Barometer Übersicht öffnen",
+        "Hint": "Erlaubt Spielern den Zugriff auf dieselbe anonymisierte Übersicht wie der Spielleitung."
+      },
+      "MinRespondents": {
+        "Name": "Mindestanzahl an notwendigen Bewertungen",
+        "Hint": "Solange weniger Bewertungen vorliegen, bleibt die jeweilige Achse ausgeblendet. Dies schützt die Anonymität in kleinen Spielrunden."
+      },
+      "RevealDelay": {
+        "Name": "Verzögerung der ergebnis Anzeige (in Sekunden)",
+        "Hint": "Maximale zufällige Verzögerung, bevor eine Änderung beim Spielleiter sichtbar wird — sowohl bei der Benachrichtig als auch in der geöffneten Barometer Übersicht. 0 = Echtzeit. Eine höhere Verzögerung erschwert es, eine Bewertung einem bestimmten Ereignis am Spieltisch zuzuordnen. Keine Bewertung geht verloren, lediglich der genaue Zeitpunkt wird nicht mehr nachvollziehbar."
+      },
+      "AutoOpen": {
+        "Name": "Barometer Übersicht bei Anmeldung öffnen",
+        "Hint": "Die Barometer Übersicht wird beim Laden der Spielwelt automatisch angezeigt."
+      },
+      "Axes": {
+        "Name": "Barometer-Achsen",
+        "Hint": "Bezeichnungen, Icon Symbole und die Art der einzelnen Bewertungsachsen.",
+        "Label": "Achsen konfigurieren",
+        "Title": "Barometer-Achsen",
+        "EditorIntro": "Füge Bewertungsachsen hinzu, entferne sie oder ändere ihre Reihenfolge. Änderungen werden sofort übernommen. Bereits abgegebene Bewertungen für beibehaltene Achsen bleiben erhalten.",
+        "Add": "Achse hinzufügen",
+        "Remove": "Diese Achse entfernen",
+        "NamePlaceholder": "Name der Achse",
+        "LabelPlaceholder": "Bezeichnung",
+        "PickIcon": "Icon Symbol auswählen",
+        "FreeIcon": "Oder ein beliebiges Emoji einfügen und mit Enter bestätigen",
+        "KindBipolar": "Mittelwert ist Optimum",
+        "KindOrdinal": "Werte rechts sind optimal",
+        "KindHint": "Bipolar: Beide Enden sind als Warnung zu sehen, der Mittelwert ist optimal (z. B. Spieltempo, Rollenspielanteil). Ordinal: Werte zur Rechten hin sind optimal und die beste Bewertung (z. B. Spielspaß).",
+        "Advanced": "Fortgeschritten (JSON)",
+        "AdvancedHint": "Solange dieser Bereich geöffnet ist, haben seine Inhalte beim Speichern Vorrang vor den obigen Eingabefeldern.",
+        "EditorHint": "Ein Objekt pro Achse. \"die Art\" ist entweder \"bipolar\" (das Optimum liegt in der Mitte, z. B. Spieltempo, Rollenspielanteil) oder \"ordinal\" (das Optimum liegt rechts, z. B. Spielspaß). Die drei Optionen müssen die Werte -1, 0 und 1 besitzen. Eine Bezeichnung kann ein Übersetzungsschlüssel oder ein einfacher Text sein.",
+        "Reset": "Standardachsen wiederherstellen",
+        "Save": "Speichern",
+        "NeedsName": "Jede Achse benötigt einen Namen, bevor sie gespeichert werden kann.",
+        "Invalid": "Ungültiges JSON: {error}",
+        "Saved": "Achsen gespeichert."
+      }
+    },
+    "Notify": {
+      "NoGM": "Kein Spielleiter verbunden: Deine Bewertung wird übermittelt, sobald sich ein Spielleiter verbindet."
+    },
+    "Validation": {
+      "Root": "Das Wurzelelement muss ein nicht leeres Array sein.",
+      "TooMany": "Maximal {max} Achsen sind erlaubt ({count} sind vorhanden).",
+      "NoId": "Jede Achse benötigt eine 'id' in Textform.",
+      "BadId": "Die Achsen-ID '{id}' darf höchstens {max} Zeichen enthalten. Erlaubt sind nur Buchstaben, Ziffern, - und _.",
+      "ForbiddenId": "'{id}' kann nicht als Achsen-ID verwendet werden.",
+      "DuplicateId": "Doppelte Achsen-ID: '{id}'.",
+      "NoLabel": "Die Achse '{id}' hat keine Bezeichnung ('label'-Eigenschaft).",
+      "BadLabel": "Die Bezeichnung der Achse '{id}' darf höchstens {max} Zeichen lang sein.",
+      "BadKind": "Die Achse '{id}' muss von ihrer Art her entweder \"ordinal\" oder \"bipolar\" sein.",
+      "BadOptions": "Die Achse '{id}' muss genau 3 Optionen besitzen.",
+      "BadValues": "Die Optionen der Achse '{id}' müssen die Werte -1, 0 und 1 besitzen.",
+      "OptionLabel": "Eine Option der Achse '{id}' hat eine Bezeichnung mit mehr als {max} Zeichen.",
+      "OptionIcon": "Eine Option der Achse '{id}' hat ein Icon Symbol mit mehr als {max} Zeichen."
+    }
+  }
+}
