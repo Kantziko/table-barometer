@@ -53,6 +53,26 @@ export class TBApplication extends ApplicationV2 {
     this.#syncMinimizeButton();
   }
 
+  /**
+   * Whether Escape may close this window.
+   *
+   * Escape is first and foremost how one deselects a token, and Foundry only
+   * falls through to that AFTER trying to close every framed application — and
+   * only if none actually closed (see `client-keybindings.mjs`, cases 4 and 5).
+   * A palette meant to live on screen must therefore let the key pass, or every
+   * deselection costs the GM their window AND fails to deselect anything.
+   *
+   * Foundry flags this origin with `closeKey` precisely so an application can
+   * decline. Windows opened for a task, like the axis editor, say true instead:
+   * there, closing on Escape is what anyone would expect.
+   */
+  static CLOSE_ON_ESCAPE = false;
+
+  async close(options = {}) {
+    if (options.closeKey && !this.constructor.CLOSE_ON_ESCAPE) return this;
+    return super.close(options);
+  }
+
   _onRender(context, options) {
     super._onRender?.(context, options);
     this.#syncMinimizeButton();

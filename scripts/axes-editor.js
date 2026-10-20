@@ -25,6 +25,9 @@ const EMOJI_SUGGESTIONS = [
 ];
 
 export class AxesEditor extends TBApplication {
+  /* Opened for a task, not meant to stay: Escape closes it, as expected. */
+  static CLOSE_ON_ESCAPE = true;
+
   static DEFAULT_OPTIONS = {
     id: "tb-axes-editor",
     classes: ["table-barometer", "tb-axes-editor"],
