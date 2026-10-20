@@ -32,7 +32,7 @@ jobs:
           mv module.tmp module.json
 
       - name: Build module.zip
-        run: zip -r module.zip module.json LICENSE README.md scripts styles lang
+        run: zip -r module.zip module.json LICENSE README.md CHANGELOG.md scripts styles lang
 
       - name: Attach files to the release
         env:
